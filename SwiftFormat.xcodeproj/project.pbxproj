@@ -81,6 +81,18 @@
 		2E7D30A42A7940C500C32174 /* Singularize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D30A32A7940C500C32174 /* Singularize.swift */; };
 		37D828AB24BF77DA0012FC0A /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D828AA24BF77DA0012FC0A /* XcodeKit.framework */; };
 		37D828AC24BF77DA0012FC0A /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37D828AA24BF77DA0012FC0A /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		492122D62B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */; };
+		492122D72B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */; };
+		492122D82B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */; };
+		492122D92B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */; };
+		49783D112B6ED7E400FB80A0 /* IndexedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D102B6ED7E400FB80A0 /* IndexedToken.swift */; };
+		49783D132B6ED85600FB80A0 /* Rules+TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D122B6ED85600FB80A0 /* Rules+TCA.swift */; };
+		49783D142B6ED91500FB80A0 /* Rules+TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D122B6ED85600FB80A0 /* Rules+TCA.swift */; };
+		49783D152B6ED91500FB80A0 /* Rules+TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D122B6ED85600FB80A0 /* Rules+TCA.swift */; };
+		49783D162B6ED91600FB80A0 /* Rules+TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D122B6ED85600FB80A0 /* Rules+TCA.swift */; };
+		49783D172B6ED92B00FB80A0 /* IndexedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D102B6ED7E400FB80A0 /* IndexedToken.swift */; };
+		49783D182B6ED92B00FB80A0 /* IndexedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D102B6ED7E400FB80A0 /* IndexedToken.swift */; };
+		49783D192B6ED92C00FB80A0 /* IndexedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49783D102B6ED7E400FB80A0 /* IndexedToken.swift */; };
 		9028F7831DA4B435009FE5B4 /* SwiftFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EAC41D5DB54A00A0A8E3 /* SwiftFormat.swift */; };
 		9028F7841DA4B435009FE5B4 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EABF1D5DB4F700A0A8E3 /* Tokenizer.swift */; };
 		9028F7851DA4B435009FE5B4 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3987C1D763493009ADE61 /* Formatter.swift */; };
@@ -234,6 +246,9 @@
 		01F3DF8F1DBA003E00454944 /* InferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceTests.swift; sourceTree = "<group>"; };
 		2E7D30A32A7940C500C32174 /* Singularize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singularize.swift; sourceTree = "<group>"; };
 		37D828AA24BF77DA0012FC0A /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
+		49783D102B6ED7E400FB80A0 /* IndexedToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedToken.swift; sourceTree = "<group>"; };
+		49783D122B6ED85600FB80A0 /* Rules+TCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rules+TCA.swift"; sourceTree = "<group>"; };
 		90C4B6CA1DA4B04A009EB000 /* SwiftFormat for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftFormat for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C4B6CC1DA4B04A009EB000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C4B6D01DA4B04A009EB000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -368,6 +383,7 @@
 				01045A982119979400D2BE3D /* Arguments.swift */,
 				01045A90211988F100D2BE3D /* Inference.swift */,
 				01A0EABE1D5DB4F700A0A8E3 /* Rules.swift */,
+				49783D122B6ED85600FB80A0 /* Rules+TCA.swift */,
 				01567D2E225B2BFD00B22D41 /* ParsingHelpers.swift */,
 				01D3B28524E9C9C700888DE0 /* FormattingHelpers.swift */,
 				01ACAE04220CD90F003F3CCF /* Examples.swift */,
@@ -378,6 +394,8 @@
 				01BBD85821DAA2A000457380 /* Globs.swift */,
 				D52F6A632A82E04600FE1448 /* GitHelpers.swift */,
 				D52F6A682A82E0DD00FE1448 /* ShellHelpers.swift */,
+				49783D102B6ED7E400FB80A0 /* IndexedToken.swift */,
+				492122D52B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -788,6 +806,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49783D132B6ED85600FB80A0 /* Rules+TCA.swift in Sources */,
 				D52F6A642A82E04600FE1448 /* GitHelpers.swift in Sources */,
 				01045A992119979400D2BE3D /* Arguments.swift in Sources */,
 				01567D2F225B2BFD00B22D41 /* ParsingHelpers.swift in Sources */,
@@ -796,9 +815,11 @@
 				DD9AD3A32999FCC8001C2C0E /* Reporter.swift in Sources */,
 				E4FABAD5202FEF060065716E /* OptionDescriptor.swift in Sources */,
 				01BBD85921DAA2A000457380 /* Globs.swift in Sources */,
+				49783D112B6ED7E400FB80A0 /* IndexedToken.swift in Sources */,
 				D52F6A692A82E0DD00FE1448 /* ShellHelpers.swift in Sources */,
 				01ACAE05220CD90F003F3CCF /* Examples.swift in Sources */,
 				01D3B28624E9C9C700888DE0 /* FormattingHelpers.swift in Sources */,
+				492122D62B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */,
 				E4E4D3C92033F17C000D7CB1 /* EnumAssociable.swift in Sources */,
 				A3DF48252620E03600F45A5F /* JSONReporter.swift in Sources */,
 				01A0EAC11D5DB4F700A0A8E3 /* Rules.swift in Sources */,
@@ -847,9 +868,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49783D142B6ED91500FB80A0 /* Rules+TCA.swift in Sources */,
+				49783D192B6ED92C00FB80A0 /* IndexedToken.swift in Sources */,
 				01A0EAD51D5DC08A00A0A8E3 /* Rules.swift in Sources */,
 				01A0EAD61D5DC08A00A0A8E3 /* Tokenizer.swift in Sources */,
 				01567D30225B2BFD00B22D41 /* ParsingHelpers.swift in Sources */,
+				492122D72B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */,
 				01B3987F1D7634A0009ADE61 /* Formatter.swift in Sources */,
 				01A0EAD41D5DC08A00A0A8E3 /* SwiftFormat.swift in Sources */,
 				DD9AD39F2999FCC8001C2C0E /* GithubActionsLogReporter.swift in Sources */,
@@ -880,6 +904,7 @@
 				015D3A562995A0340065B2D9 /* AboutViewController.swift in Sources */,
 				E41CB5C52027700100C1BEDE /* FreeTextTableCellView.swift in Sources */,
 				E4872125201D980D0014845E /* BinarySelectionTableCellView.swift in Sources */,
+				49783D182B6ED92B00FB80A0 /* IndexedToken.swift in Sources */,
 				E487211D201D885A0014845E /* RulesViewController.swift in Sources */,
 				01045A9B2119979400D2BE3D /* Arguments.swift in Sources */,
 				E4872114201D3B8C0014845E /* Tokenizer.swift in Sources */,
@@ -897,7 +922,9 @@
 				E4872129201E3DD50014845E /* RulesStore.swift in Sources */,
 				E41CB5BF2025761D00C1BEDE /* UserSelection.swift in Sources */,
 				E4872111201D3B830014845E /* Options.swift in Sources */,
+				49783D152B6ED91500FB80A0 /* Rules+TCA.swift in Sources */,
 				01A95BD3225BEDE400744931 /* ParsingHelpers.swift in Sources */,
+				492122D82B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */,
 				D52F6A662A82E04600FE1448 /* GitHelpers.swift in Sources */,
 				90C4B6CD1DA4B04A009EB000 /* AppDelegate.swift in Sources */,
 			);
@@ -912,6 +939,7 @@
 				01045A9F2119D30D00D2BE3D /* Inference.swift in Sources */,
 				01A95BD2225BEDE300744931 /* ParsingHelpers.swift in Sources */,
 				90C4B6E51DA4B059009EB000 /* SourceEditorExtension.swift in Sources */,
+				49783D172B6ED92B00FB80A0 /* IndexedToken.swift in Sources */,
 				0142C77023C3FB6D005D5832 /* LintFileCommand.swift in Sources */,
 				E4E4D3CC2033F17C000D7CB1 /* EnumAssociable.swift in Sources */,
 				E4FABAD8202FEF060065716E /* OptionDescriptor.swift in Sources */,
@@ -929,7 +957,9 @@
 				B9C4F55C2387FA3E0088DBEE /* SupportedContentUTIs.swift in Sources */,
 				90C4B6E71DA4B059009EB000 /* FormatSelectionCommand.swift in Sources */,
 				90F16AF81DA5EB4600EB4EA1 /* FormatFileCommand.swift in Sources */,
+				49783D162B6ED91600FB80A0 /* Rules+TCA.swift in Sources */,
 				01ACAE08220CD916003F3CCF /* Examples.swift in Sources */,
+				492122D92B6F61430021D4CF /* Token+CustomDebugStringConvertible.swift in Sources */,
 				D52F6A672A82E04600FE1448 /* GitHelpers.swift in Sources */,
 				9028F7861DA4B435009FE5B4 /* Rules.swift in Sources */,
 			);

@@ -50,7 +50,7 @@ public final class FormatRule: Equatable, Comparable {
         deprecationMessage != nil
     }
 
-    fileprivate init(help: String,
+    init(help: String,
                      deprecationMessage: String? = nil,
                      runOnceOnly: Bool = false,
                      disabledByDefault: Bool = false,
@@ -181,6 +181,8 @@ extension _FormatRules {
 
 public struct _FormatRules {
     fileprivate init() {}
+    
+    public let tcaScopeStoreWithKeyPaths = Self._tcaScopeStoreWithKeyPaths
 
     /// Replace the obsolete `@UIApplicationMain` and `@NSApplicationMain`
     /// attributes with `@main` in Swift 5.3 and above, per SE-0383
