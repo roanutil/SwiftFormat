@@ -12,7 +12,7 @@ extension Token: CustomDebugStringConvertible {
     public var debugDescription: String {
         "Token.\(caseDescription)"
     }
-    
+
     private var caseDescription: String {
         switch self {
         case let .number(string, numberType):
@@ -23,59 +23,58 @@ extension Token: CustomDebugStringConvertible {
             )
             """
         case let .linebreak(string, originalLine):
-                        """
-                        linebreak(
-                            \(string),
-                            OriginalLine.\(originalLine.description)
-                        )
-                        """
+            """
+            linebreak(
+                \(string),
+                OriginalLine.\(originalLine.description)
+            )
+            """
         case let .startOfScope(string):
-                        """
-                        startOfScope(\(string))
-                        """
+            """
+            startOfScope(\(string))
+            """
         case let .endOfScope(string):
-                        """
-                        endOfScope(\(string))
-                        """
+            """
+            endOfScope(\(string))
+            """
         case let .delimiter(string):
-                        """
-                        delimiter(\(string))
-                        """
+            """
+            delimiter(\(string))
+            """
         case let .operator(string, operatorType):
-                        """
-                        operator(
-                            \(string),
-                            \(operatorType.debugDescription)
-                        )
-                        """
+            """
+            operator(
+                \(string),
+                \(operatorType.debugDescription)
+            )
+            """
         case let .stringBody(string):
-                        """
-                        stringBody(\(string))
-                        """
+            """
+            stringBody(\(string))
+            """
         case let .keyword(string):
-                        """
-                        keyword(\(string))
-                        """
+            """
+            keyword(\(string))
+            """
         case let .identifier(string):
-                        """
-                        identifier(\(string))
-                        """
+            """
+            identifier(\(string))
+            """
         case let .space(string):
-                        """
-                        space(\(string))
-                        """
+            """
+            space(\(string))
+            """
         case let .commentBody(string):
-                        """
-                        commentBody(\(string))
-                        """
+            """
+            commentBody(\(string))
+            """
         case let .error(string):
-                        """
-                        error(\(string))
-                        """
+            """
+            error(\(string))
+            """
         }
     }
 }
-
 
 extension NumberType: CustomDebugStringConvertible {
     public var debugDescription: String {

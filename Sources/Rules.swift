@@ -51,13 +51,13 @@ public final class FormatRule: Equatable, Comparable {
     }
 
     init(help: String,
-                     deprecationMessage: String? = nil,
-                     runOnceOnly: Bool = false,
-                     disabledByDefault: Bool = false,
-                     orderAfter: [String] = [],
-                     options: [String] = [],
-                     sharedOptions: [String] = [],
-                     _ fn: @escaping (Formatter) -> Void)
+         deprecationMessage: String? = nil,
+         runOnceOnly: Bool = false,
+         disabledByDefault: Bool = false,
+         orderAfter: [String] = [],
+         options: [String] = [],
+         sharedOptions: [String] = [],
+         _ fn: @escaping (Formatter) -> Void)
     {
         self.fn = fn
         self.help = help
@@ -181,7 +181,7 @@ extension _FormatRules {
 
 public struct _FormatRules {
     fileprivate init() {}
-    
+
     public let tcaScopeStoreWithKeyPaths = Self._tcaScopeStoreWithKeyPaths
 
     /// Replace the obsolete `@UIApplicationMain` and `@NSApplicationMain`
