@@ -184,6 +184,8 @@ public struct _FormatRules {
 
     public let tcaScopeStoreWithKeyPaths = Self._tcaScopeStoreWithKeyPaths
 
+    public let tcaMigrationConvertOldCasePathToKeyPath = Self._tcaMigrationConvertOldCasePathToKeyPath
+
     /// Replace the obsolete `@UIApplicationMain` and `@NSApplicationMain`
     /// attributes with `@main` in Swift 5.3 and above, per SE-0383
     public let applicationMain = FormatRule(

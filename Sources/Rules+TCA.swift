@@ -197,6 +197,43 @@ public extension _FormatRules {
             scopeWithKeyPath(startIndex: formatter.index(after: stateParameter.index, where: { !$0.isSpaceOrCommentOrLinebreak && $0.string != ":" })!)
         }
     }
+
+    static let _tcaMigrationConvertOldCasePathToKeyPath = FormatRule(
+        help: """
+        Convert the old CasePath API `/TypeName.caseName` to use the new
+        KeyPath `\\TypeName.caseName API via `@CasePathable`
+        """
+    ) { formatter in
+        formatter.forEach(.operator("/", .prefix)) { forwardSlashIndex, _ in
+            guard let enumTypeName = formatter.nextIndexedToken(after: forwardSlashIndex, where: { !$0.isSpaceOrCommentOrLinebreak }),
+                  enumTypeName.isTypeIdentifier,
+                  let chainingToken = formatter.nextToken(after: enumTypeName.index, where: { !$0.isSpaceOrCommentOrLinebreak }),
+                  chainingToken.isOperator(".", .infix)
+            else {
+                return
+            }
+
+            guard let endOfCurrentScopeIndex = formatter.endOfScope(at: forwardSlashIndex) else {
+                return
+            }
+            let endOfCasePathScopeIndex: Int
+            if let nextDelimiter = formatter.nextIndexedToken(in: forwardSlashIndex ..< endOfCurrentScopeIndex, where: { $0 == .delimiter(",") }) {
+                endOfCasePathScopeIndex = min(endOfCurrentScopeIndex, nextDelimiter.index)
+            } else {
+                endOfCasePathScopeIndex = endOfCurrentScopeIndex
+            }
+
+            for index in (forwardSlashIndex ... endOfCasePathScopeIndex).reversed() where formatter.tokens[index].isTypeIdentifier {
+                if let nextNonEmptyToken = formatter.nextIndexedToken(after: index, where: { !$0.isSpaceOrCommentOrLinebreak }),
+                   nextNonEmptyToken.token == .operator(".", .infix)
+                {
+                    formatter.removeToken(at: nextNonEmptyToken.index)
+                }
+                formatter.removeToken(at: index)
+            }
+            formatter.replaceToken(at: forwardSlashIndex, with: [.operator("\\", .prefix), .operator(".", .infix)])
+        }
+    }
 }
 
 extension Formatter {
